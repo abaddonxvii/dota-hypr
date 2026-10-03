@@ -1,0 +1,28 @@
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Colors
+ *
+ * Available Colors Schemes
+ *
+ * adapta    catppuccin    everforest    navy       paper
+ * arc       cyberpunk     gruvbox       nord       solarized
+ * black     dracula       lovelace      onedark    yousai
+ *
+ **/
+
+/* Import color-scheme from `colors` directory */
+
+@import "~/.cache/matugen/colors-rofi.rasi"
+
+* {
+    /* 80 — средняя плотность, AA — высокая плотность (чуть-чуть блюра) */
+    background:     #09120C80;
+    background-alt: #122117AA;
+    foreground:     #E0F8E8;
+    selected:       #00FA9A;
+    active:         #32CD32;
+    urgent:         #FF5555;
+}

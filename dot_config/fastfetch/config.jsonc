@@ -1,0 +1,96 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "command-raw",
+    "source": "pokeget zygarde --hide-name",
+    "width": 20,
+    "padding": {
+      "right": 3
+    }
+  },
+  "display": {
+    "separator": " ",
+    "color": {
+      "keys": "38;2;0;255;102",
+      "title": "38;2;0;255;102",
+      "output": "38;2;224;224;224"
+    }
+  },
+  "modules": [
+    {
+      "type": "title",
+      "format": "\u001b[38;2;0;255;102m{1}@{2}\u001b[0m"
+    },
+    "break",
+    {
+      "type": "os",
+      "key": "⚙ ",
+      "format": "{3}"
+    },
+    {
+      "type": "kernel",
+      "key": "󰌽",
+      "format": "{2}"
+    },
+    {
+      "type": "wm",
+      "key": "󰧨",
+      "format": "{2}"
+    },
+    {
+      "type": "terminal",
+      "key": ""
+    },
+    {
+      "type": "shell",
+      "key": "󰞷",
+      "format": "{1} {4}"
+    },
+    {
+      "type": "uptime",
+      "key": "󰅐",
+      "format": "{2}h {3}m"
+    },
+    {
+      "type": "packages",
+      "key": "󰏖"
+    },
+    {
+      "type": "display",
+      "key": "󰍹",
+      "format": "{1}x{2} @ {3}Hz"
+    },
+    {
+      "type": "cpu",
+      "key": "󰍛",
+      "format": "{1}"
+    },
+    {
+      "type": "gpu",
+      "key": "󰢮",
+      "format": "{2}",
+      "hideType": "integrated"
+    },
+    {
+      "type": "gpu",
+      "key": "󰢮",
+      "format": "{2}",
+      "hideType": "discrete"
+    },
+    {
+      "type": "memory",
+      "key": "󰑭",
+      "format": "{1} / {2} ({3})"
+    },
+    {
+      "type": "media",
+      "key": "󰝚",
+      "format": "{1} - {3}"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "  \u001b[38;2;1;65;28m● \u001b[38;2;50;205;50m● \u001b[38;2;0;250;154m● \u001b[38;2;0;255;102m● \u001b[38;2;0;255;102m●\u001b[0m"
+    }
+  ]
+}

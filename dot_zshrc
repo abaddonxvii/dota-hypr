@@ -1,0 +1,56 @@
+export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME=""
+
+# Подключаем ТОЛЬКО стандартные плагины (без fzf-tab / zsh-autocomplete)
+plugins=(
+    git
+    zsh-syntax-highlighting
+    zsh-history-substring-search
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# Настройки истории
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt SHARE_HISTORY
+
+
+# Цвета FZF
+export FZF_DEFAULT_OPTS=" \
+--color=fg:#E0F8E8,bg:-1,hl:#00FA9A \
+--color=fg+:#E0F8E8,bg+:#122117,hl+:#32CD32 \
+--color=info:#32CD32,prompt:#00FA9A,pointer:#00FA9A \
+--color=marker:#00FA9A,spinner:#32CD32,header:#00FA9A"
+
+# Инициализация утилит
+source <(fzf --zsh)
+eval "$(zoxide init zsh)"
+
+# Подключение IRIS от versenilvis
+eval "$(iris init zsh)"
+
+# Инициализация Starship
+eval "$(starship init zsh)"
+fastfetch
+export EDITOR=nvim
+export VISUAL=nvim
+
+# mimocode
+export PATH=/home/abaddon/.mimocode/bin:$PATH
+
+. "$HOME/.local/share/../bin/env"
+
+# >>> Codex installer >>>
+export PATH="/home/abaddon/.local/bin:$PATH"
+# <<< Codex installer <<<
+
+# bun completions
+[ -s "/home/abaddon/.bun/_bun" ] && source "/home/abaddon/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
